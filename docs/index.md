@@ -1,21 +1,21 @@
 # CLI Reference
 
-`myBuild` is invoked as:
+`flint` is invoked as:
 
 ```
-myBuild <command> [args]
+flint <command> [args]
 ```
 
-Running `myBuild` with no command prints a short usage summary and exits with status `1`.
+Running `flint` with no command prints a short usage summary and exits with status `1`.
 
 ## Commands
 
 ### `init`
 
-Initialize a new myBuild project in the current directory.
+Initialize a new flint project in the current directory.
 
 ```
-myBuild init
+flint init
 ```
 
 ---
@@ -25,7 +25,7 @@ myBuild init
 Add a remote library dependency by URL.
 
 ```
-myBuild add <url>
+flint add <url>
 ```
 
 **Arguments**
@@ -41,7 +41,7 @@ myBuild add <url>
 Add one or more local libraries to the project.
 
 ```
-myBuild add-lib [args...]
+flint add-lib [args...]
 ```
 
 **Arguments**
@@ -57,7 +57,7 @@ myBuild add-lib [args...]
 Add one or more compiler/build flags to the project configuration.
 
 ```
-myBuild add-flag [args...]
+flint add-flag [args...]
 ```
 
 **Arguments**
@@ -73,7 +73,7 @@ myBuild add-flag [args...]
 Build the project.
 
 ```
-myBuild build
+flint build
 ```
 
 ---
@@ -83,7 +83,7 @@ myBuild build
 Build (if needed) and run the project.
 
 ```
-myBuild run
+flint run
 ```
 
 ---
@@ -93,7 +93,7 @@ myBuild run
 Generate a `compile_commands.json` file for the project, for use with editor/IDE tooling and language servers.
 
 ```
-myBuild gen
+flint gen
 ```
 
 ---
@@ -103,7 +103,7 @@ myBuild gen
 Sync project dependencies (e.g. fetch/update declared libraries).
 
 ```
-myBuild sync
+flint sync
 ```
 
 ---

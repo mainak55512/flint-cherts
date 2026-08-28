@@ -1,4 +1,4 @@
-site_name: MyBuild
+site_name: Flint Cherts
 
 theme:
   name: material
@@ -21,4 +21,4 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - CookBook: cookbook.md
+  - Compositions: compositions.md

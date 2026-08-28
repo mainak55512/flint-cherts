@@ -1,6 +1,6 @@
-## MyBuild CookBook
+## Flint Cherts
 
-Paste the recipe for the dependency in the `dependencies` section of your myBuild.json file and run `myBuild sync`.
+Paste the "composition" for the dependency in the `dependencies` section of your `composition.json` file and run `flint sync`.
 
 ### Arena (lang: C)
 
@@ -121,7 +121,7 @@ A http server library for C++ projects.
 
 A graphics simulation library.
 
-NOTE: the `flags` may change on the basis of environment. Below recipe is for
+NOTE: the `flags` may change on the basis of environment. Below composition is for
 x11 systems.
 
 ```json
