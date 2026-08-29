@@ -1,5 +1,19 @@
 # CLI Reference
 
+## Installation
+
+Flint is currently available only for Linux.
+
+**Prerequisits:**
+- GCC/Clang compiler chain
+- GIT
+
+Run the following command in terminal:
+
+```bash
+curl -fsSL -H "Accept: application/vnd.github.v3.raw" https://api.github.com/repos/mainak55512/flint/contents/build.sh | bash
+```
+
 `flint` is invoked as:
 
 ```
