@@ -8,7 +8,7 @@ An arena allocator written purely in C.
 
 ```json
 "arena": {
-    "version": "0.1.1",
+    "version": "v0.1.1",
     "include_paths": [
         "include"
     ],
@@ -26,7 +26,7 @@ Uses arena allocator as dependency.
 
 ```json
 "CString": {
-    "version": "0.1.1",
+    "version": "v0.1.1",
     "include_paths": [
         "include"
     ],
@@ -43,7 +43,7 @@ A vector library written in pure C.
 
 ```json
 "container": {
-    "version": "0.1.1",
+    "version": "v0.1.1",
     "include_paths": [
         "include"
     ],
@@ -61,7 +61,7 @@ Depends on arena allocator.
 
 ```json
 "Cmap": {
-    "version": "0.0.3",
+    "version": "v0.1.1",
     "include_paths": [
         "include"
     ],

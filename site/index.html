@@ -257,6 +257,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
       Commands
@@ -416,6 +425,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#commands" class="md-nav__link">
     <span class="md-ellipsis">
       Commands
@@ -536,19 +554,27 @@
 
 
 <h1 id="cli-reference">CLI Reference</h1>
+<h2 id="installation">Installation</h2>
+<p>Flint is currently available only for Linux.</p>
+<p><strong>Prerequisits:</strong>
+- GCC/Clang compiler chain
+- GIT</p>
+<p>Run the following command in terminal:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Accept: application/vnd.github.v3.raw&quot;</span><span class="w"> </span>https://api.github.com/repos/mainak55512/flint/contents/build.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</span></code></pre></div>
 <p><code>flint</code> is invoked as:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flint &lt;command&gt; [args]
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flint &lt;command&gt; [args]
 </span></code></pre></div>
 <p>Running <code>flint</code> with no command prints a short usage summary and exits with status <code>1</code>.</p>
 <h2 id="commands">Commands</h2>
 <h3 id="init"><code>init</code></h3>
 <p>Initialize a new flint project in the current directory.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flint init
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>flint init
 </span></code></pre></div>
 <hr />
 <h3 id="add-url"><code>add &lt;url&gt;</code></h3>
 <p>Add a remote library dependency by URL.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>flint add &lt;url&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>flint add &lt;url&gt;
 </span></code></pre></div>
 <p><strong>Arguments</strong></p>
 <table>
@@ -568,7 +594,7 @@
 <hr />
 <h3 id="add-lib-args"><code>add-lib [args...]</code></h3>
 <p>Add one or more local libraries to the project.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>flint add-lib [args...]
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>flint add-lib [args...]
 </span></code></pre></div>
 <p><strong>Arguments</strong></p>
 <table>
@@ -588,7 +614,7 @@
 <hr />
 <h3 id="add-flag-args"><code>add-flag [args...]</code></h3>
 <p>Add one or more compiler/build flags to the project configuration.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>flint add-flag [args...]
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>flint add-flag [args...]
 </span></code></pre></div>
 <p><strong>Arguments</strong></p>
 <table>
@@ -608,22 +634,22 @@
 <hr />
 <h3 id="build"><code>build</code></h3>
 <p>Build the project.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>flint build
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>flint build
 </span></code></pre></div>
 <hr />
 <h3 id="run"><code>run</code></h3>
 <p>Build (if needed) and run the project.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>flint run
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>flint run
 </span></code></pre></div>
 <hr />
 <h3 id="gen"><code>gen</code></h3>
 <p>Generate a <code>compile_commands.json</code> file for the project, for use with editor/IDE tooling and language servers.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>flint gen
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>flint gen
 </span></code></pre></div>
 <hr />
 <h3 id="sync"><code>sync</code></h3>
 <p>Sync project dependencies (e.g. fetch/update declared libraries).</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>flint sync
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>flint sync
 </span></code></pre></div>
 <hr />
 <h2 id="exit-codes">Exit Codes</h2>

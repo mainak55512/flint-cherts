@@ -34,13 +34,16 @@ flint init
 
 ---
 
-### `add <url>`
+### `add <url>@<version>`
 
 Add a remote library dependency by URL.
 
 ```
-flint add <url>
+flint add <url>@<version>
 ```
+Note: version is the tag name of the remote repository. To install the latest version of the library use `@unknown`. The remote repository must contain `composition.json`.
+
+e.g. `flint add https://github.com/mainak55512/arena@v0.1.1` or, `flint add https://github.com/mainak55512/arena@unknown`
 
 **Arguments**
 
@@ -118,6 +121,21 @@ Sync project dependencies (e.g. fetch/update declared libraries).
 
 ```
 flint sync
+```
+
+Note: Declare the chert composition in the `dependencies` section of your `composition.json`. Example chert composition:
+
+```json
+"arena": {
+    "version": "v0.1.1",
+    "include_paths": [
+        "include"
+    ],
+    "src": [
+        "lib"
+    ],
+    "remote": "https://github.com/mainak55512/arena"
+}
 ```
 
 ---
