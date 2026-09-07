@@ -285,9 +285,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-url" class="md-nav__link">
+  <a href="#add-urlversion" class="md-nav__link">
     <span class="md-ellipsis">
-      add &lt;url&gt;
+      add &lt;url&gt;@&lt;version&gt;
     </span>
   </a>
   
@@ -453,9 +453,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-url" class="md-nav__link">
+  <a href="#add-urlversion" class="md-nav__link">
     <span class="md-ellipsis">
-      add &lt;url&gt;
+      add &lt;url&gt;@&lt;version&gt;
     </span>
   </a>
   
@@ -572,10 +572,12 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>flint init
 </span></code></pre></div>
 <hr />
-<h3 id="add-url"><code>add &lt;url&gt;</code></h3>
+<h3 id="add-urlversion"><code>add &lt;url&gt;@&lt;version&gt;</code></h3>
 <p>Add a remote library dependency by URL.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>flint add &lt;url&gt;
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>flint add &lt;url&gt;@&lt;version&gt;
 </span></code></pre></div>
+Note: version is the tag name of the remote repository. To install the latest version of the library use <code>@unknown</code>. The remote repository must contain <code>composition.json</code>.</p>
+<p>e.g. <code>flint add https://github.com/mainak55512/arena@v0.1.1</code> or, <code>flint add https://github.com/mainak55512/arena@unknown</code></p>
 <p><strong>Arguments</strong></p>
 <table>
 <thead>
@@ -650,6 +652,18 @@
 <h3 id="sync"><code>sync</code></h3>
 <p>Sync project dependencies (e.g. fetch/update declared libraries).</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>flint sync
+</span></code></pre></div>
+<p>Note: Declare the chert composition in the <code>dependencies</code> section of your <code>composition.json</code>. Example chert composition:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&quot;arena&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v0.1.1&quot;</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nt">&quot;include_paths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="s2">&quot;include&quot;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="nt">&quot;src&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="s2">&quot;lib&quot;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="nt">&quot;remote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/mainak55512/arena&quot;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
 <h2 id="exit-codes">Exit Codes</h2>
