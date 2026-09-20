@@ -13,7 +13,7 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/flint_logo.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
@@ -43,6 +43,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -88,8 +90,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Flint Cherts" class="md-header__button md-logo" aria-label="Flint Cherts" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/flint_logo.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -195,8 +196,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Flint Cherts" class="md-nav__button md-logo" aria-label="Flint Cherts" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/flint_logo.ico" alt="logo">
 
     </a>
     Flint Cherts
@@ -345,6 +345,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lua-lang-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      lua (lang: C)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -450,6 +459,15 @@
   <a href="#raylib-lang-c" class="md-nav__link">
     <span class="md-ellipsis">
       Raylib (lang: C)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lua-lang-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      lua (lang: C)
     </span>
   </a>
   
@@ -597,6 +615,37 @@ x11 systems.</p>
 </span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="p">],</span>
 </span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="nt">&quot;remote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/raysan5/raylib.git&quot;</span>
 </span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="lua-lang-c">lua (lang: C)</h3>
+<p>An embeddable scripting language. This is the library version of the scripting language.</p>
+<p>NOTE: the <code>flags</code> may change on the basis of environment.</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v5.5.1&quot;</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&quot;remote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/lua/lua&quot;</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&quot;flags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="s2">&quot;-std=c99&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-O2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wall&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wextra&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wfatal-errors&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wshadow&quot;</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="s2">&quot;-Wundef&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wwrite-strings&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wredundant-decls&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wdisabled-optimization&quot;</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="s2">&quot;-Wdouble-promotion&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wmissing-declarations&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wconversion&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wlogical-op&quot;</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="s2">&quot;-Wno-aggressive-loop-optimizations&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wdeclaration-after-statement&quot;</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="s2">&quot;-Wmissing-prototypes&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wnested-externs&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wstrict-prototypes&quot;</span><span class="p">,</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="s2">&quot;-Wc++-compat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wold-style-definition&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-DLUA_USE_LINUX&quot;</span><span class="p">,</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="s2">&quot;-fno-stack-protector&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-fno-common&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-Wl,-E&quot;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="nt">&quot;lib_links&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="s2">&quot;-ldl&quot;</span><span class="p">,</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="s2">&quot;-lm&quot;</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">  </span><span class="nt">&quot;excludes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="s2">&quot;lua.c&quot;</span><span class="p">,</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">    </span><span class="s2">&quot;onelua.c&quot;</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">  </span><span class="nt">&quot;include_paths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="s2">&quot;&quot;</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">  </span><span class="nt">&quot;src&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="s2">&quot;&quot;</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="p">}</span>
 </span></code></pre></div>
 
 
