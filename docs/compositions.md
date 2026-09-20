@@ -157,7 +157,7 @@ An embeddable scripting language. This is the library version of the scripting l
 NOTE: the `flags` may change on the basis of environment.
 
 ```json
-{
+"lua": {
   "version": "v5.5.1",
   "remote": "https://github.com/lua/lua",
   "flags": [
@@ -183,5 +183,45 @@ NOTE: the `flags` may change on the basis of environment.
   "src": [
     ""
   ]
+}
+```
+
+### boost/asio (lang: C++)
+
+Boost.org asio module
+
+```json
+"asio": {
+  "version": "unknown",
+  "remote": "https://github.com/boostorg/asio.git",
+  "flags": [
+    "-std=c++11"
+  ],
+  "lib_links": [
+    "-lpthread"
+  ],
+  "include_paths": [
+    "include"
+  ],
+  "src": []
+}
+```
+
+### boost/math (lang: C++)
+
+Boost.org math module
+
+```json
+"math": {
+  "version": "unknown",
+  "remote": "https://github.com/boostorg/math.git",
+  "flags": [
+    "-std=c++14",
+    "-DBOOST_MATH_STANDALONE=1"
+  ],
+  "include_paths": [
+    "include"
+  ],
+  "src": []
 }
 ```
