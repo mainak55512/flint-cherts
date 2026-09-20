@@ -152,6 +152,6 @@ Ensure your generated block strictly adheres to valid JSON rules (e.g., no trail
 
 When submitting a new library composition to this repository:
 
-1. Create a pull request containing your addition in a dedicated folder or within the central registry index.
+1. Create a pull request containing your addition in `docs/compositions.md` with separate section for the new chert composition with language specification and description.
 2. Verify that `version` matches an official tag on the upstream `remote`.
-3. Test that `flint` builds the package cleanly without missing symbol warnings or missing include headers.
+3. Test that `flint` fetches and builds the package cleanly without missing symbol warnings or missing include headers.
