@@ -225,3 +225,21 @@ Boost.org math module
   "src": []
 }
 ```
+
+### mINI (lang: C++)
+
+INI file reader and writer
+
+```json
+"mINI": {
+    "version": "0.9.20",
+    "remote": "https://github.com/metayeti/mINI.git",
+    "flags": [
+        "-std=c++17"
+    ],
+    "include_paths": [
+      "src"
+    ],
+    "src": []
+}
+```
