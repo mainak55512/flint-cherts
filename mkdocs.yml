@@ -2,6 +2,8 @@ site_name: Flint Cherts
 
 theme:
   name: material
+  logo: assets/flint_logo.ico
+  favicon: assets/flint_logo.ico
   features:
     - navigation.instant
     - content.code.copy       # Adds a sleek "Copy" button to your JSON blocks
@@ -10,6 +12,9 @@ theme:
     - scheme: slate
       primary: black
       accent: cyan
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.highlight:

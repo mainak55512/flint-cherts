@@ -149,3 +149,39 @@ x11 systems.
     "remote": "https://github.com/raysan5/raylib.git"
 }
 ```
+
+### lua (lang: C)
+
+An embeddable scripting language. This is the library version of the scripting language.
+
+NOTE: the `flags` may change on the basis of environment.
+
+```json
+{
+  "version": "v5.5.1",
+  "remote": "https://github.com/lua/lua",
+  "flags": [
+    "-std=c99", "-O2", "-Wall", "-Wextra", "-Wfatal-errors", "-Wshadow",
+    "-Wundef", "-Wwrite-strings", "-Wredundant-decls", "-Wdisabled-optimization",
+    "-Wdouble-promotion", "-Wmissing-declarations", "-Wconversion", "-Wlogical-op",
+    "-Wno-aggressive-loop-optimizations", "-Wdeclaration-after-statement",
+    "-Wmissing-prototypes", "-Wnested-externs", "-Wstrict-prototypes",
+    "-Wc++-compat", "-Wold-style-definition", "-DLUA_USE_LINUX",
+    "-fno-stack-protector", "-fno-common", "-Wl,-E"
+  ],
+  "lib_links": [
+    "-ldl",
+    "-lm"
+  ],
+  "excludes": [
+    "lua.c",
+    "onelua.c"
+  ],
+  "include_paths": [
+    ""
+  ],
+  "src": [
+    ""
+  ]
+}
+```
