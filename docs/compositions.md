@@ -6,6 +6,14 @@ Paste the "composition" for the dependency in the `dependencies` section of your
 
 An arena allocator written purely in C.
 
+**Install with flint:**
+
+```bash
+flint add https://github.com/mainak55512/arena@v0.1.1
+```
+
+**Composition:**
+
 ```json
 "arena": {
     "version": "v0.1.1",
@@ -24,6 +32,14 @@ An arena allocator written purely in C.
 A String library with basic string manipulation capabilities.
 Uses arena allocator as dependency.
 
+**Install with flint:**
+
+```bash
+flint add https://github.com/mainak55512/CString@v0.1.1
+```
+
+**Composition:**
+
 ```json
 "CString": {
     "version": "v0.1.1",
@@ -40,6 +56,14 @@ Uses arena allocator as dependency.
 ### Container (lang: C)
 
 A vector library written in pure C.
+
+**Install with flint:**
+
+```bash
+flint add https://github.com/mainak55512/container@v0.1.1
+```
+
+**Composition:**
 
 ```json
 "container": {
@@ -59,6 +83,14 @@ A vector library written in pure C.
 A hashmap library written in pure C.
 Depends on arena allocator.
 
+**Install with flint:**
+
+```bash
+flint add https://github.com/mainak55512/Cmap@v0.1.1
+```
+
+**Composition:**
+
 ```json
 "Cmap": {
     "version": "v0.1.1",
@@ -76,6 +108,8 @@ Depends on arena allocator.
 
 A json library written in pure C.
 
+**Composition:**
+
 ```json
 "yyjson": {
     "version": "0.12.0",
@@ -92,6 +126,8 @@ A json library written in pure C.
 ### Crow (lang: C++)
 
 A http server library for C++ projects.
+
+**Composition:**
 
 ```json
 "Crow": {
@@ -124,6 +160,8 @@ A graphics simulation library.
 NOTE: the `flags` may change on the basis of environment. Below composition is for
 x11 systems.
 
+**Composition:**
+
 ```json
 "raylib": {
     "version": "unknown",
@@ -155,6 +193,8 @@ x11 systems.
 An embeddable scripting language. This is the library version of the scripting language.
 
 NOTE: the `flags` may change on the basis of environment.
+
+**Composition:**
 
 ```json
 "lua": {
@@ -190,6 +230,8 @@ NOTE: the `flags` may change on the basis of environment.
 
 Boost.org asio module
 
+**Composition:**
+
 ```json
 "asio": {
   "version": "unknown",
@@ -211,6 +253,8 @@ Boost.org asio module
 
 Boost.org math module
 
+**Composition:**
+
 ```json
 "math": {
   "version": "unknown",
@@ -229,6 +273,8 @@ Boost.org math module
 ### mINI (lang: C++)
 
 INI file reader and writer
+
+**Composition:**
 
 ```json
 "mINI": {
