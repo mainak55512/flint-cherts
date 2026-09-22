@@ -11,7 +11,7 @@ Flint is currently available only for Linux.
 Run the following command in terminal:
 
 ```bash
-curl -fsSL -H "Accept: application/vnd.github.v3.raw" https://api.github.com/repos/mainak55512/flint/contents/build.sh | bash
+curl -fsSL -H "Accept: application/vnd.github.v3.raw" https://api.github.com/repos/mainak55512/flint/contents/install.sh | bash
 ```
 
 `flint` is invoked as:
