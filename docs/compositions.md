@@ -17,12 +17,6 @@ flint add https://github.com/mainak55512/arena@v0.1.1
 ```json
 "arena": {
     "version": "v0.1.1",
-    "include_paths": [
-        "include"
-    ],
-    "src": [
-        "lib"
-    ],
     "remote": "https://github.com/mainak55512/arena"
 }
 ```
@@ -43,12 +37,6 @@ flint add https://github.com/mainak55512/CString@v0.1.1
 ```json
 "CString": {
     "version": "v0.1.1",
-    "include_paths": [
-        "include"
-    ],
-    "src": [
-        "lib"
-    ],
     "remote": "https://github.com/mainak55512/CString"
 }
 ```
@@ -68,12 +56,6 @@ flint add https://github.com/mainak55512/container@v0.1.1
 ```json
 "container": {
     "version": "v0.1.1",
-    "include_paths": [
-        "include"
-    ],
-    "src": [
-        "lib"
-    ],
     "remote": "https://github.com/mainak55512/container"
 }
 ```
@@ -94,12 +76,6 @@ flint add https://github.com/mainak55512/Cmap@v0.1.1
 ```json
 "Cmap": {
     "version": "v0.1.1",
-    "include_paths": [
-        "include"
-    ],
-    "src": [
-        "lib"
-    ],
     "remote": "https://github.com/mainak55512/Cmap"
 }
 ```
@@ -113,14 +89,9 @@ A json library written in pure C.
 ```json
 "yyjson": {
     "version": "0.12.0",
-    "include_paths": [
-        "src"
-    ],
-    "src": [
-        "src"
-    ],
+    "exclude_dirs": ["fuzz", "misc", "test"],
     "remote": "https://github.com/ibireme/yyjson"
-}
+}        
 ```
 
 ### Crow (lang: C++)
@@ -131,26 +102,17 @@ A http server library for C++ projects.
 
 ```json
 "Crow": {
-    "version": "1.1.1",
+    "version": "unknown",
     "flags": [
-        "-std=c++17",
-        "-O3",
-        "-DASIO_NO_DEPRECATED",
-        "-DCROW_ENABLE_SSL",
-        "-DCROW_ENABLE_COMPRESSION"
+        "-std=c++17", "-O3", "-DASIO_NO_DEPRECATED",
+        "-DCROW_ENABLE_SSL", "-DCROW_ENABLE_COMPRESSION"
     ],
     "lib_links": [
-        "-lpthread",
-        "-lssl",
-        "-lcrypto",
-        "-lz"
+        "-lpthread", "-lssl", "-lcrypto", "-lz"
     ],
-    "include_paths": [
-        "include"
-    ],
-    "src": [],
+    "exclude_dirs": ["cmake", "docs", "examples", "scripts", "tests"],
     "remote": "https://github.com/CrowCpp/Crow"
-}    
+}
 ```
 
 ### Raylib (lang: C)
@@ -176,14 +138,17 @@ x11 systems.
         "-lGL", "-lX11", "-lXrandr", "-lXinerama", "-lXi",
         "-lXcursor", "-lm", "-lpthread", "-ldl", "-lrt"
     ],
-    "include_paths": [
-        "src",
-        "src/platforms",
-        "src/external/glfw/include"
+
+    "excludes": [
+        "src/rcore_desktop.c", "src/rcore_desktop_glfw.c",
+        "src/rcore_desktop_sdl.c", "src/rcore_web.c",
+        "src/rcore_android.c", "src/rcore_drm.c", "src/raylib.rc"
     ],
-    "src": [
-        "src"
+    "exclude_dirs": [
+        "examples", "projects", "tools",
+        "src/external", "src/platforms"
     ],
+    "exclude_exception": ["src/external/glfw/include"],
     "remote": "https://github.com/raysan5/raylib.git"
 }
 ```
@@ -210,19 +175,12 @@ NOTE: the `flags` may change on the basis of environment.
     "-fno-stack-protector", "-fno-common", "-Wl,-E"
   ],
   "lib_links": [
-    "-ldl",
-    "-lm"
+    "-ldl", "-lm"
   ],
   "excludes": [
-    "lua.c",
-    "onelua.c"
+    "lua.c", "onelua.c"
   ],
-  "include_paths": [
-    ""
-  ],
-  "src": [
-    ""
-  ]
+  "exclude_dirs": ["testes"]
 }
 ```
 
@@ -242,10 +200,8 @@ Boost.org asio module
   "lib_links": [
     "-lpthread"
   ],
-  "include_paths": [
-    "include"
-  ],
-  "src": []
+  "exclude_dirs": [""],
+  "exclude_exception": ["include"]
 }
 ```
 
@@ -263,10 +219,8 @@ Boost.org math module
     "-std=c++14",
     "-DBOOST_MATH_STANDALONE=1"
   ],
-  "include_paths": [
-    "include"
-  ],
-  "src": []
+  "exclude_dirs": [""],
+  "exclude_exception": ["include"]
 }
 ```
 
@@ -283,9 +237,28 @@ INI file reader and writer
     "flags": [
         "-std=c++17"
     ],
-    "include_paths": [
-      "src"
-    ],
-    "src": []
+    "exclude_dirs": ["tests"]
+}
+```
+
+### libsodium (lang: C)
+
+A crypto library in C
+
+**Composition:**
+
+```json
+"libsodium": {
+    "version": "unknown",
+    "tmpl": {
+        "SODIUM_LIBRARY_VERSION_MAJOR": "30",
+        "SODIUM_LIBRARY_VERSION_MINOR":"0",
+        "DLL_VERSION": "30",
+        "SODIUM_LIBRARY_VERSION": "30:0:0"
+    },
+    "flags": ["-w"],
+    "lib_links": ["-lpthread"],
+    "exclude_dirs": ["build", "builds", "test"],
+    "remote": "https://github.com/jedisct1/libsodium.git"
 }
 ```

@@ -53,6 +53,23 @@ e.g. `flint add https://github.com/mainak55512/arena@v0.1.1` or, `flint add http
 
 ---
 
+### `remove <chert name>`
+
+Remove a dependency from the project
+
+```
+flint remove <chert name>
+```
+e.g. `flint remove raylib`
+
+**Arguments**
+
+| Argument | Description |
+|---|---|
+| `cher name` | The name of the library be removed |
+
+---
+
 ### `add-lib [args...]`
 
 Add one or more local libraries to the project.
@@ -138,6 +155,16 @@ Note: Declare the chert composition in the `dependencies` section of your `compo
 }
 ```
 
+### `cache`
+
+Clears the cache of the project
+
+```
+flint cache
+```
+
+---
+
 ---
 
 ## Exit Codes
@@ -153,10 +180,12 @@ Note: Declare the chert composition in the `dependencies` section of your `compo
 |---|---|
 | `init` | Initialize a new project |
 | `add <url>` | Add a remote library dependency |
+| `remove <chert name>` | Remove a dependency |
 | `add-lib [args...]` | Add local library dependencies |
 | `add-flag [args...]` | Add build flags |
 | `build` | Build the project |
 | `run` | Build and run the project |
 | `gen` | Generate `compile_commands.json` |
 | `sync` | Sync dependencies |
+| `cache` | Clear build cache |
 
