@@ -294,6 +294,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#remove-chert-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove &lt;chert name&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#add-lib-args" class="md-nav__link">
     <span class="md-ellipsis">
       add-lib [args...]
@@ -342,6 +351,15 @@
   <a href="#sync" class="md-nav__link">
     <span class="md-ellipsis">
       sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      cache
     </span>
   </a>
   
@@ -462,6 +480,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#remove-chert-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove &lt;chert name&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#add-lib-args" class="md-nav__link">
     <span class="md-ellipsis">
       add-lib [args...]
@@ -510,6 +537,15 @@
   <a href="#sync" class="md-nav__link">
     <span class="md-ellipsis">
       sync
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      cache
     </span>
   </a>
   
@@ -594,9 +630,30 @@ Note: version is the tag name of the remote repository. To install the latest ve
 </tbody>
 </table>
 <hr />
+<h3 id="remove-chert-name"><code>remove &lt;chert name&gt;</code></h3>
+<p>Remove a dependency from the project</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>flint remove &lt;chert name&gt;
+</span></code></pre></div>
+e.g. <code>flint remove raylib</code></p>
+<p><strong>Arguments</strong></p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cher name</code></td>
+<td>The name of the library be removed</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="add-lib-args"><code>add-lib [args...]</code></h3>
 <p>Add one or more local libraries to the project.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>flint add-lib [args...]
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>flint add-lib [args...]
 </span></code></pre></div>
 <p><strong>Arguments</strong></p>
 <table>
@@ -616,7 +673,7 @@ Note: version is the tag name of the remote repository. To install the latest ve
 <hr />
 <h3 id="add-flag-args"><code>add-flag [args...]</code></h3>
 <p>Add one or more compiler/build flags to the project configuration.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>flint add-flag [args...]
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>flint add-flag [args...]
 </span></code></pre></div>
 <p><strong>Arguments</strong></p>
 <table>
@@ -636,35 +693,40 @@ Note: version is the tag name of the remote repository. To install the latest ve
 <hr />
 <h3 id="build"><code>build</code></h3>
 <p>Build the project.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>flint build
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>flint build
 </span></code></pre></div>
 <hr />
 <h3 id="run"><code>run</code></h3>
 <p>Build (if needed) and run the project.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>flint run
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>flint run
 </span></code></pre></div>
 <hr />
 <h3 id="gen"><code>gen</code></h3>
 <p>Generate a <code>compile_commands.json</code> file for the project, for use with editor/IDE tooling and language servers.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>flint gen
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>flint gen
 </span></code></pre></div>
 <hr />
 <h3 id="sync"><code>sync</code></h3>
 <p>Sync project dependencies (e.g. fetch/update declared libraries).</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>flint sync
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>flint sync
 </span></code></pre></div>
 <p>Note: Declare the chert composition in the <code>dependencies</code> section of your <code>composition.json</code>. Example chert composition:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&quot;arena&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v0.1.1&quot;</span><span class="p">,</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nt">&quot;include_paths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="s2">&quot;include&quot;</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="nt">&quot;src&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="s2">&quot;lib&quot;</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="nt">&quot;remote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/mainak55512/arena&quot;</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="p">}</span>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">&quot;arena&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v0.1.1&quot;</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nt">&quot;include_paths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="s2">&quot;include&quot;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="nt">&quot;src&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="s2">&quot;lib&quot;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="nt">&quot;remote&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://github.com/mainak55512/arena&quot;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="p">}</span>
 </span></code></pre></div>
+<h3 id="cache"><code>cache</code></h3>
+<p>Clears the cache of the project</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>flint cache
+</span></code></pre></div>
+<hr />
 <hr />
 <h2 id="exit-codes">Exit Codes</h2>
 <table>
@@ -703,6 +765,10 @@ Note: version is the tag name of the remote repository. To install the latest ve
 <td>Add a remote library dependency</td>
 </tr>
 <tr>
+<td><code>remove &lt;chert name&gt;</code></td>
+<td>Remove a dependency</td>
+</tr>
+<tr>
 <td><code>add-lib [args...]</code></td>
 <td>Add local library dependencies</td>
 </tr>
@@ -725,6 +791,10 @@ Note: version is the tag name of the remote repository. To install the latest ve
 <tr>
 <td><code>sync</code></td>
 <td>Sync dependencies</td>
+</tr>
+<tr>
+<td><code>cache</code></td>
+<td>Clear build cache</td>
 </tr>
 </tbody>
 </table>
