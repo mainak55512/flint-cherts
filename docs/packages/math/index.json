@@ -1,0 +1,12 @@
+{
+"math": {
+  "version": "unknown",
+  "remote": "https://github.com/boostorg/math.git",
+  "flags": [
+    "-std=c++14",
+    "-DBOOST_MATH_STANDALONE=1"
+  ],
+  "exclude_dirs": [""],
+  "exclude_exception": ["include"]
+}
+}

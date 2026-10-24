@@ -1,0 +1,28 @@
+{
+"raylib": {
+    "version": "unknown",
+    "flags": [
+        "-std=c99", "-D_GNU_SOURCE", "-DGL_SILENCE_DEPRECATION=199309L",
+        "-DPLATFORM_DESKTOP_GLFW", "-DGRAPHICS_API_OPENGL_33",
+        "-DSUPPORT_MODULE_RSHAPES=1", "-DSUPPORT_MODULE_RTEXTURES=1",
+        "-DSUPPORT_MODULE_RTEXT=1", "-DSUPPORT_MODULE_RMODELS=1",
+        "-DSUPPORT_MODULE_RAUDIO=1", "-D_GLFW_X11"
+    ],
+    "lib_links": [
+        "-lGL", "-lX11", "-lXrandr", "-lXinerama", "-lXi",
+        "-lXcursor", "-lm", "-lpthread", "-ldl", "-lrt"
+    ],
+
+    "excludes": [
+        "src/rcore_desktop.c", "src/rcore_desktop_glfw.c",
+        "src/rcore_desktop_sdl.c", "src/rcore_web.c",
+        "src/rcore_android.c", "src/rcore_drm.c", "src/raylib.rc"
+    ],
+    "exclude_dirs": [
+        "examples", "projects", "tools",
+        "src/external", "src/platforms"
+    ],
+    "exclude_exception": ["src/external/glfw/include"],
+    "remote": "https://github.com/raysan5/raylib.git"
+}
+}

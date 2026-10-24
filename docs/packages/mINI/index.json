@@ -1,0 +1,10 @@
+{
+"mINI": {
+    "version": "0.9.20",
+    "remote": "https://github.com/metayeti/mINI.git",
+    "flags": [
+        "-std=c++17"
+    ],
+    "exclude_dirs": ["tests"]
+}
+}
