@@ -1,6 +1,6 @@
 ## Flint Cherts
 
-Paste the "composition" for the dependency in the `dependencies` section of your `composition.json` file and run `flint sync`.
+Paste the "composition" for the dependency in the `sync` section of your `composition.json` file and run `flint sync`.
 
 ### Arena (lang: C)
 
@@ -10,6 +10,12 @@ An arena allocator written purely in C.
 
 ```bash
 flint add https://github.com/mainak55512/arena@v0.1.1
+```
+
+Or, 
+
+```bash
+flint add cherts:arena
 ```
 
 **Composition:**
@@ -32,6 +38,12 @@ Uses arena allocator as dependency.
 flint add https://github.com/mainak55512/CString@v0.1.1
 ```
 
+Or,
+
+```bash
+flint add cherts:CString
+```
+
 **Composition:**
 
 ```json
@@ -48,14 +60,20 @@ A vector library written in pure C.
 **Install with flint:**
 
 ```bash
-flint add https://github.com/mainak55512/container@v0.1.1
+flint add https://github.com/mainak55512/container@v0.1.2
+```
+
+Or,
+
+```bash
+flint add cherts:container
 ```
 
 **Composition:**
 
 ```json
 "container": {
-    "version": "v0.1.1",
+    "version": "v0.1.2",
     "remote": "https://github.com/mainak55512/container"
 }
 ```
@@ -68,14 +86,20 @@ Depends on arena allocator.
 **Install with flint:**
 
 ```bash
-flint add https://github.com/mainak55512/Cmap@v0.1.1
+flint add https://github.com/mainak55512/Cmap@v0.1.2
+```
+
+Or,
+
+```bash
+flint add cherts:Cmap
 ```
 
 **Composition:**
 
 ```json
 "Cmap": {
-    "version": "v0.1.1",
+    "version": "v0.1.2",
     "remote": "https://github.com/mainak55512/Cmap"
 }
 ```
@@ -83,6 +107,12 @@ flint add https://github.com/mainak55512/Cmap@v0.1.1
 ### yyjson (lang: C)
 
 A json library written in pure C.
+
+**Install with flint:**
+
+```bash
+flint add cherts:yyjson
+```
 
 **Composition:**
 
@@ -97,6 +127,12 @@ A json library written in pure C.
 ### Crow (lang: C++)
 
 A http server library for C++ projects.
+
+**Install with flint:**
+
+```bash
+flint add cherts:crow
+```
 
 **Composition:**
 
@@ -121,6 +157,12 @@ A graphics simulation library.
 
 NOTE: the `flags` may change on the basis of environment. Below composition is for
 x11 systems.
+
+**Install with flint:**
+
+```bash
+flint add cherts:raylib
+```
 
 **Composition:**
 
@@ -159,6 +201,12 @@ An embeddable scripting language. This is the library version of the scripting l
 
 NOTE: the `flags` may change on the basis of environment.
 
+**Install with flint:**
+
+```bash
+flint add cherts:lua
+```
+
 **Composition:**
 
 ```json
@@ -188,6 +236,12 @@ NOTE: the `flags` may change on the basis of environment.
 
 Boost.org asio module
 
+**Install with flint:**
+
+```bash
+flint add cherts:asio
+```
+
 **Composition:**
 
 ```json
@@ -209,6 +263,12 @@ Boost.org asio module
 
 Boost.org math module
 
+**Install with flint:**
+
+```bash
+flint add cherts:math
+```
+
 **Composition:**
 
 ```json
@@ -228,6 +288,12 @@ Boost.org math module
 
 INI file reader and writer
 
+**Install with flint:**
+
+```bash
+flint add cherts:mINI
+```
+
 **Composition:**
 
 ```json
@@ -245,6 +311,12 @@ INI file reader and writer
 
 A crypto library in C
 
+**Install with flint:**
+
+```bash
+flint add cherts:libsodium
+```
+
 **Composition:**
 
 ```json
@@ -260,5 +332,39 @@ A crypto library in C
     "lib_links": ["-lpthread"],
     "exclude_dirs": ["build", "builds", "test"],
     "remote": "https://github.com/jedisct1/libsodium.git"
+}
+```
+
+### Mongoose (lang: C)
+
+A http library for C.
+
+**Install with flint:**
+
+```bash
+flint add cherts:mongoose
+```
+
+**Composition:**
+
+```json
+"mongoose": {
+    "version": "7.23",
+    "remote": "https://github.com/cesanta/mongoose.git",
+    "hash": "02bdbb9ed6f0a8f7c42228c6e7cb35d748b60551",
+    "lib_links": [
+        "windows:-lws2_32",
+        "windows:-ladvapi32",
+        "windows:-lcrypt32"
+    ],
+    "flags": [
+        "-O3",
+        "-Wall",
+        "-DMG_TLS=MG_TLS_BUILTIN",
+        "-DMG_ENABLE_LOG=0"
+    ],
+    "exclude_dirs": [
+        "resources", "src", "test", "tutorials"
+    ]
 }
 ```

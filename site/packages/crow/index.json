@@ -1,0 +1,14 @@
+{
+"Crow": {
+    "version": "unknown",
+    "flags": [
+        "-std=c++17", "-O3", "-DASIO_NO_DEPRECATED",
+        "-DCROW_ENABLE_SSL", "-DCROW_ENABLE_COMPRESSION"
+    ],
+    "lib_links": [
+        "-lpthread", "-lssl", "-lcrypto", "-lz"
+    ],
+    "exclude_dirs": ["cmake", "docs", "examples", "scripts", "tests"],
+    "remote": "https://github.com/CrowCpp/Crow"
+}
+}

@@ -1,0 +1,14 @@
+{
+"asio": {
+  "version": "unknown",
+  "remote": "https://github.com/boostorg/asio.git",
+  "flags": [
+    "-std=c++11"
+  ],
+  "lib_links": [
+    "-lpthread"
+  ],
+  "exclude_dirs": [""],
+  "exclude_exception": ["include"]
+}
+}

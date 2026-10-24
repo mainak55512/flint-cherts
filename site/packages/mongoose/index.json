@@ -1,0 +1,21 @@
+{
+"mongoose": {
+    "version": "7.23",
+    "remote": "https://github.com/cesanta/mongoose.git",
+    "hash": "02bdbb9ed6f0a8f7c42228c6e7cb35d748b60551",
+    "lib_links": [
+        "windows:-lws2_32",
+        "windows:-ladvapi32",
+        "windows:-lcrypt32"
+    ],
+    "flags": [
+        "-O3",
+        "-Wall",
+        "-DMG_TLS=MG_TLS_BUILTIN",
+        "-DMG_ENABLE_LOG=0"
+    ],
+    "exclude_dirs": [
+        "resources", "src", "test", "tutorials"
+    ]
+}
+}
