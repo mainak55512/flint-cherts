@@ -1,0 +1,15 @@
+{
+"libsodium": {
+    "version": "unknown",
+    "tmpl": {
+        "SODIUM_LIBRARY_VERSION_MAJOR": "30",
+        "SODIUM_LIBRARY_VERSION_MINOR":"0",
+        "DLL_VERSION": "30",
+        "SODIUM_LIBRARY_VERSION": "30:0:0"
+    },
+    "flags": ["-w"],
+    "lib_links": ["-lpthread"],
+    "exclude_dirs": ["build", "builds", "test"],
+    "remote": "https://github.com/jedisct1/libsodium.git"
+}
+}
