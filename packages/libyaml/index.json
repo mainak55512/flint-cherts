@@ -1,0 +1,24 @@
+{
+"libyaml": {
+    "version": "0.2.5",
+    "flags": [
+        "-D_POSIX_C_SOURCE=200809L",
+        "-DYAML_VERSION_MAJOR=0",
+        "-DYAML_VERSION_MINOR=2",
+        "-DYAML_VERSION_PATCH=5",
+        "'-DYAML_VERSION_STRING=\\\"0.2.5\\\"'",
+        "-DYAML_DECLARE_STATIC"
+    ],
+    "lib_links": [],
+    "excludes": [],
+    "exclude_dirs": [
+        "cmake",
+        "doc",
+        "examples",
+        "tests",
+        "win32"
+    ],
+    "exclude_exception": [],
+    "remote": "https://github.com/yaml/libyaml.git"
+}
+}

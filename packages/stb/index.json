@@ -1,0 +1,12 @@
+{
+"stb": {
+        "version": "unknown",
+        "remote": "https://github.com/nothings/stb.git",
+        "lib_links": ["-lm"],
+        "exclude_dirs": [
+            "tests",
+            "deprecated",
+            "tools"
+        ]
+}
+}
