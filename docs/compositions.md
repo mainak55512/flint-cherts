@@ -368,3 +368,110 @@ flint add cherts:mongoose
     ]
 }
 ```
+
+### libyaml(lang: C)
+
+YAML library written in C
+
+**Install with flint:**
+
+```bash
+flint add cherts:libyaml
+```
+
+**Composition:**
+
+```json
+"libyaml": {
+    "version": "0.2.5",
+    "flags": [
+        "-D_POSIX_C_SOURCE=200809L",
+        "-DYAML_VERSION_MAJOR=0",
+        "-DYAML_VERSION_MINOR=2",
+        "-DYAML_VERSION_PATCH=5",
+        "'-DYAML_VERSION_STRING=\\\"0.2.5\\\"'",
+        "-DYAML_DECLARE_STATIC"
+    ],
+    "lib_links": [],
+    "excludes": [],
+    "exclude_dirs": [
+        "cmake",
+        "doc",
+        "examples",
+        "tests",
+        "win32"
+    ],
+    "exclude_exception": [],
+    "remote": "https://github.com/yaml/libyaml.git"
+}
+```
+
+### libcyaml(lang: C)
+
+Schema based YAML library written in C
+
+**Note:**
+`libcyaml` library depends on `libyaml` library. If `libyaml` is already installed in your OS, add `-lyaml` in `lib_links`, else add it as a flint dependency with following:
+
+```bash
+flint add cherts:libyaml
+```
+
+**Install with flint:**
+
+```bash
+flint add cherts:libcyaml
+```
+
+**Composition:**
+
+```json
+"libcyaml": {
+    "version": "unknown",
+    "flags": [
+        "-std=c11",
+        "-O2",
+        "-DNDEBUG",
+        "-DVERSION_MAJOR=2",
+        "-DVERSION_MINOR=0",
+        "-DVERSION_PATCH=0",
+        "-DVERSION_DEVEL=1"
+    ],
+    "lib_links": [],
+    "excludes": [],
+    "exclude_dirs": [
+        "build",
+        "docs",
+        "examples",
+        "test"
+    ],
+    "exclude_exception": ["include"],
+    "remote": "https://github.com/tlsa/libcyaml.git"
+}
+```
+
+### stb(lang: C)
+
+Single-file public domain (or MIT licensed) libraries for C/C++
+Included libraries: stb_image.h, stb_image_write.h, stb_image_resize2.h, stb_truetype.h, stb_rect_pack.h, stb_perlin.h, stb_voxel_render.h, stb_dxt.h, stb_easy_font.h, stb_tilemap_editor.h, stb_herringbone_wang_tile.h, stb_vorbis.c, stb_hexwave.h, stb_ds.h, stb_sprintf.h, stb_textedit.h, stb_c_lexer.h, stb_divide.h, stb_include.h, stb_leakcheck.h, stb_connected_components.h
+
+**Install with flint:**
+
+```bash
+flint add cherts:stb
+```
+
+**Composition:**
+
+```json
+"stb": {
+    "version": "unknown",
+    "remote": "https://github.com/nothings/stb.git",
+    "lib_links": ["-lm"],
+    "exclude_dirs": [
+        "tests",
+        "deprecated",
+        "tools"
+    ]
+}
+```
