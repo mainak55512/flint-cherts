@@ -1,0 +1,24 @@
+{
+    "libcyaml": {
+        "version": "unknown",
+        "flags": [
+            "-std=c11",
+            "-O2",
+            "-DNDEBUG",
+            "-DVERSION_MAJOR=2",
+            "-DVERSION_MINOR=0",
+            "-DVERSION_PATCH=0",
+            "-DVERSION_DEVEL=1"
+        ],
+        "lib_links": [],
+        "excludes": [],
+        "exclude_dirs": [
+            "build",
+            "docs",
+            "examples",
+            "test"
+        ],
+        "exclude_exception": ["include"],
+        "remote": "https://github.com/tlsa/libcyaml.git"
+    }
+}
