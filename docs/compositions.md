@@ -73,7 +73,7 @@ flint add cherts:container
 
 ```json
 "container": {
-    "version": "v0.1.2",
+    "version": "v0.2.0",
     "remote": "https://github.com/mainak55512/container"
 }
 ```
