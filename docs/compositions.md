@@ -60,7 +60,7 @@ A vector library written in pure C.
 **Install with flint:**
 
 ```bash
-flint add https://github.com/mainak55512/container@v0.1.2
+flint add https://github.com/mainak55512/container@v0.2.2
 ```
 
 Or,
@@ -73,7 +73,7 @@ flint add cherts:container
 
 ```json
 "container": {
-    "version": "v0.2.0",
+    "version": "v0.2.2",
     "remote": "https://github.com/mainak55512/container"
 }
 ```
