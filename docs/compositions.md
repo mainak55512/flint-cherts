@@ -86,7 +86,7 @@ Depends on arena allocator.
 **Install with flint:**
 
 ```bash
-flint add https://github.com/mainak55512/Cmap@v0.1.2
+flint add https://github.com/mainak55512/Cmap@v0.2.0
 ```
 
 Or,
@@ -99,7 +99,7 @@ flint add cherts:Cmap
 
 ```json
 "Cmap": {
-    "version": "v0.1.2",
+    "version": "v0.2.0",
     "remote": "https://github.com/mainak55512/Cmap"
 }
 ```
